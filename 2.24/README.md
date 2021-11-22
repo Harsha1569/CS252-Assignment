@@ -59,42 +59,42 @@ List of system calls listed in ```strace_log``` in order of occurrence are as fo
   * Line 5: `openat(AT_FDCWD, "/home/harsha/simulation_ws/devel/lib/tls/x86_64/x86_64/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)`
   * If the pathname given in pathname is relative, then it is interpreted relative to the directory referred to by the file descriptor dirfd rather than relative to the current working directory of the calling process. However, in our case if the pathname given in pathname is relative and dirfd is the special value AT_FDCWD, then pathname is interpreted relative to the current working directory of the calling process
 
-7. `int fstat(int fd, struct stat *buf);`
+6. `int fstat(int fd, struct stat *buf);`
 
   * Line 38: `fstat(3, {st_mode=S_IFREG|0644, st_size=261976, ...}) = 0`
   * Gets file status.
 
-8. `int close(int fd);`
+7. `int close(int fd);`
 
   * Line 40: `close(3) = 0`
   * Closes a file descriptor so that it no longer refers to any file.
 
-9. `int mprotect(void *addr, size_t len, int prot);`
+8. `int mprotect(void *addr, size_t len, int prot);`
 
   * Line 47: `mprotect(0x7f615218a000, 2097152, PROT_NONE) = 0`
   * The function mprotect() specifies the desired protection for the memory page(s) containing part or all of the interval [addr,addr+len-1]
 
-10. `int arch_prctl(int code, unsigned long addr);`
+9. `int arch_prctl(int code, unsigned long addr);`
 
   * Line 51: `arch_prctl(ARCH_SET_FS, 0x7f615257c500) = 0`
   * Set architecture-specific thread state.
 
 
-11. `ssize_t write(int fd, const void *buf, size_t count);`
+10. `ssize_t write(int fd, const void *buf, size_t count);`
 
   * Line 60: `write(1, "Enter name of source file: ", 27) = 27`
   * Line 63: `write(1, "Enter name of destination file: ", 32) = 32`
   * Line 70: `write(5, "The message to be copied is \"Hel"..., 46) = 46`
   * Write to a file descriptor
 
-12. `ssize_t read(int fd, void *buf, size_t count);`
+11. `ssize_t read(int fd, void *buf, size_t count);`
 
   * Line 61: `read(0, "source_file.txt\n", 1024) = 16`
   * Line 64: `read(0, "destination_file.txt\n", 1024) = 21`
   * Line 69: `read(4, "The message to be copied is \"Hel"..., 47) = 46`
   * Read from a file descriptor.
 
-13. `void exit_group(int status);`
+12. `void exit_group(int status);`
 
   * Line 75: `exit_group(0)`
   * This system call terminates not only the present thread, but all threads in the current thread group.
