@@ -1,7 +1,7 @@
 
 # Filecopy.c
 
-**Instructions to follow while compiling this code**  
+**Instructions to follow while compiling this code:**  
 Enter the following on the command line  
 1. ``` gcc -o Filecopy Filecopy.c ```
 2. ```./Filecopy ```
