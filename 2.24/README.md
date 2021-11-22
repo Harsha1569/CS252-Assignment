@@ -33,7 +33,7 @@ strace -o strace_log ./Filecopy.c
 ```
 To copy the contents of strace to an output file named **strace_log**
 The **strace_log** file has been uploaded for reference.   
-List of system calls listed in ```strace_log``` in order of occurrence are as follows:
+List of system calls listed in ```strace_log``` in order of occurrence of their first encounter (only) are mentioned below:
 
 1. `int execve(const char *filename, char *const argv[], char *const envp[]);`
 
