@@ -29,7 +29,7 @@ strace ./Filecopy.c
 Run the command:
 
 ```
-strace -o strace_log ./Filecopy.c
+strace -o strace_log ./Filecopy
 ```
 To copy the contents of strace to an output file named **strace_log**
 The **strace_log** file has been uploaded for reference.   
